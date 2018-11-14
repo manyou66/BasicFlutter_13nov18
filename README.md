@@ -2,7 +2,5 @@
 
 A new Flutter project.
 
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+## โคัดตัวอย่างการเรียนรู้การใช้ Row และ Column
+[![Screenshot-20181114-104444.jpg](https://i.postimg.cc/TwHHRLLX/Screenshot-20181114-104444.jpg)](https://postimg.cc/YGYxRSzX)

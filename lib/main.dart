@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   var friend2String = 'Nomita';
   var friend3String = 'Suneko';
 
-  var myFontSize = 30.0;
+  var myFontSize = 20.0;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
         appBar: new AppBar(
           title: new Text(titleName),
         ),
-        body: new Container(child: new Column(children: <Widget>[widgetMyFriend, widgetMyFriend, widgetTextMessage, widgetTextMessage,),),
+        body: new Container(child: new Column(children: <Widget>[widgetMyFriend, widgetMyFriend, widgetTextMessage, widgetTextMessage,]),),
       ),
     );
   }
