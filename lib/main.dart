@@ -13,15 +13,31 @@ class MyApp extends StatelessWidget {
   var friend1String = 'Doremon';
   var friend2String = 'Nomita';
   var friend3String = 'Suneko';
-  
+
+  var myFontSize = 30.0;
 
   @override
   Widget build(BuildContext context) {
-    
     // Demo Create Text Widget
-    Text friend1Text = new Text(friend1String);
-    Text friend2Text = new Text(friend2String);
-    Text friend3Text = new Text(friend3String);
+    Text friend1Text = new Text(
+      friend1String,
+      style: new TextStyle(
+          color: Colors.red, fontSize: myFontSize, fontWeight: FontWeight.bold),
+    );
+    Text friend2Text = new Text(
+      friend2String,
+      style: new TextStyle(
+          color: Colors.blue,
+          fontSize: myFontSize,
+          fontStyle: FontStyle.italic),
+    );
+    Text friend3Text = new Text(
+      friend3String,
+      style: new TextStyle(
+          color: Colors.green,
+          fontSize: myFontSize,
+          fontStyle: FontStyle.normal),
+    );
 
     // Create Widget for body
     Widget widgetTextMessage = new Container(
@@ -29,14 +45,20 @@ class MyApp extends StatelessWidget {
       child: new Text(messageString),
     );
 
-    Widget widgetMyFriend = new Container(
+    Widget widgetMyFriend = new Container(padding: new EdgeInsets.all(paddingDouble),
       child: new Row(
         children: <Widget>[
-          friend1Text,
-          friend2Text,
-          friend3Text
+          new Expanded(
+            child: friend1Text,
+          ),
+          new Expanded(
+            child: friend2Text,
+          ),
+          new Expanded(
+            child: friend3Text,
+          )
         ],
-      ),
+      ), color: Colors.yellow,
     );
 
     return new MaterialApp(
@@ -45,7 +67,7 @@ class MyApp extends StatelessWidget {
         appBar: new AppBar(
           title: new Text(titleName),
         ),
-        body: widgetMyFriend,
+        body: new Container(child: new Column(children: <Widget>[widgetMyFriend, widgetMyFriend, widgetTextMessage, widgetTextMessage,),),
       ),
     );
   }
